@@ -282,8 +282,8 @@ var flameSpeed = 8;
 var flameDist = 0.5;
 Flame.prototype.act = function(step) {
     this.wobble += step * wobbleSpeed;
-    var wobblePosX = Math.cos(this.wobble) * wobbleDist;
-    this.pos = this.basePos.plus(new Vector(wobblePosX, 0));
+    var wobblePosY = Math.sin(this.wobble) * wobbleDist;
+    this.pos = this.basePos.plus(new Vector(0, wobblePosY));
 
 };
 
